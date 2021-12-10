@@ -1,8 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/l10n/localization_intl.dart';
-import 'package:flutter_app/routes/home_page.dart';
-import 'package:flutter_app/states/UserModel.dart';
+import 'package:github_app/l10n/localization_intl.dart';
+import 'package:github_app/routes/home_page.dart';
+import 'package:github_app/states/UserModel.dart';
 import 'package:provider/provider.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -44,8 +43,8 @@ class MyDrawer extends StatelessWidget {
                     child: value.isLogin
                         ? gmAvatar(value.user?.avatar_url ?? "", width: 80)
                         : Image.asset(
-                            "imgs/avatar-default.png",
-                            width: 80,
+                            "assets/images/github-fill.png",
+                            width: 50,
                           ),
                   ),
                 ),
@@ -103,7 +102,7 @@ class MyDrawer extends StatelessWidget {
                             onPressed: () => Navigator.pop(context),
                           ),
                           TextButton(
-                            child: Text(gm?.yes ?? ""),
+                            child: Text(gm?.confirm ?? ""),
                             onPressed: () {
                               //该赋值语句会触发MaterialApp rebuild
                               userModel.user = null;

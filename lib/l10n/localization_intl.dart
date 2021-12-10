@@ -35,6 +35,13 @@ class GmLocalizations {
     );
   }
 
+  String get login1 {
+    return Intl.message(
+      'Login',
+      name: 'login1',
+    );
+  }
+
   String get login {
     return Intl.message(
       'login',
@@ -44,28 +51,28 @@ class GmLocalizations {
 
   String get theme {
     return Intl.message(
-      'theme',
+      'Theme',
       name: 'theme',
     );
   }
 
   String get language {
     return Intl.message(
-      'language',
+      'Language',
       name: 'language',
     );
   }
 
   String get logout {
     return Intl.message(
-      'logout',
+      'Logout',
       name: 'logout',
     );
   }
 
   String get logoutTip {
     return Intl.message(
-      'logoutTip',
+      'Are you sure logout?',
       name: 'logoutTip',
     );
   }
@@ -77,10 +84,10 @@ class GmLocalizations {
     );
   }
 
-  String get yes {
+  String get confirm {
     return Intl.message(
-      'yes',
-      name: 'yes',
+      'confirm',
+      name: 'confirm',
     );
   }
 
@@ -90,6 +97,42 @@ class GmLocalizations {
       name: 'noDescription',
     );
   }
+
+  String get userName {
+    return Intl.message(
+      'userName',
+      name: 'userName',
+    );
+  }
+
+  String get userNameOrEmail {
+    return Intl.message(
+      'userNameOrEmail',
+      name: 'userNameOrEmail',
+    );
+  }
+
+  String get userNameRequired {
+    return Intl.message(
+      'userNameRequired',
+      name: 'userNameRequired',
+    );
+  }
+
+  String get passwordRequired {
+    return Intl.message(
+      'passwordRequired',
+      name: 'passwordRequired',
+    );
+  }
+
+  String get password {
+    return Intl.message(
+      'password',
+      name: 'password',
+    );
+  }
+
 }
 
 class GmLocalizationsDelegate extends LocalizationsDelegate<GmLocalizations> {

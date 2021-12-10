@@ -5,8 +5,9 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:dio/adapter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/common/Global.dart';
-import 'package:flutter_app/models/index.dart';
+import 'package:github_app/models/index.dart';
+
+import 'Global.dart';
 
 class Git {
   // 在网络请求过程中可能会需要使用当前的context信息，比如在请求失败时

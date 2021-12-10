@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2021-12-09T18:59:24.802719",
+  "@@last_modified": "2021-12-10T17:21:44.435153",
   "title": "Flutter APP",
   "@title": {
     "description": "Title for the Demo application",
@@ -13,31 +13,37 @@
     "placeholders_order": [],
     "placeholders": {}
   },
+  "login1": "Login",
+  "@login1": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
   "login": "login",
   "@login": {
     "type": "text",
     "placeholders_order": [],
     "placeholders": {}
   },
-  "theme": "theme",
+  "theme": "Theme",
   "@theme": {
     "type": "text",
     "placeholders_order": [],
     "placeholders": {}
   },
-  "language": "language",
+  "language": "Language",
   "@language": {
     "type": "text",
     "placeholders_order": [],
     "placeholders": {}
   },
-  "logout": "logout",
+  "logout": "Logout",
   "@logout": {
     "type": "text",
     "placeholders_order": [],
     "placeholders": {}
   },
-  "logoutTip": "logoutTip",
+  "logoutTip": "Are you sure logout?",
   "@logoutTip": {
     "type": "text",
     "placeholders_order": [],
@@ -49,8 +55,44 @@
     "placeholders_order": [],
     "placeholders": {}
   },
-  "yes": "yes",
-  "@yes": {
+  "confirm": "confirm",
+  "@confirm": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "noDescription": "noDescription",
+  "@noDescription": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "userName": "userName",
+  "@userName": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "userNameOrEmail": "userNameOrEmail",
+  "@userNameOrEmail": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "userNameRequired": "userNameRequired",
+  "@userNameRequired": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "passwordRequired": "passwordRequired",
+  "@passwordRequired": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "password": "password",
+  "@password": {
     "type": "text",
     "placeholders_order": [],
     "placeholders": {}

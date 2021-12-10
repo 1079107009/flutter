@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:github_app/routes/theme_page.dart';
 import 'package:provider/provider.dart';
+import 'package:provider/single_child_widget.dart';
 
 import 'common/Global.dart';
 import 'l10n/localization_intl.dart';
 import 'routes/home_page.dart';
+import 'routes/language_page.dart';
+import 'routes/login_page.dart';
 import 'states/LocaleModel.dart';
 import 'states/ThemeModel.dart';
 import 'states/UserModel.dart';
@@ -15,16 +20,18 @@ main() async => Global.init().then((e) => runApp(Application()));
 class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Provider.debugCheckInvalidValueType = null;
     return MultiProvider(
-      providers: [
-        Provider.value(value: ThemeModel()),
-        Provider.value(value: UserModel()),
-        Provider.value(value: LocaleModel()),
+      providers: <SingleChildWidget>[
+        ChangeNotifierProvider.value(value: ThemeModel()),
+        ChangeNotifierProvider.value(value: UserModel()),
+        ChangeNotifierProvider.value(value: LocaleModel()),
       ],
       child: Consumer2<ThemeModel, LocaleModel>(
         builder:
             (BuildContext context, themeModel, localeModel, Widget? child) {
           return MaterialApp(
+            builder: EasyLoading.init(),
             theme: ThemeData(
               primarySwatch: themeModel.theme,
             ),
@@ -64,11 +71,11 @@ class Application extends StatelessWidget {
               }
             },
             // 注册命名路由表
-            // routes: <String, WidgetBuilder>{
-            //   "login": (context) => LoginRoute(),
-            //   "themes": (context) => ThemeChangeRoute(),
-            //   "language": (context) => LanguageRoute(),
-            // },
+            routes: <String, WidgetBuilder>{
+              "login": (context) => LoginRoute(),
+              "themes": (context) => ThemeChangeRoute(),
+              "language": (context) => LanguageRoute(),
+            },
           );
         },
       ),

@@ -1,12 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flukit/flukit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/common/Git.dart';
-import 'package:flutter_app/l10n/localization_intl.dart';
-import 'package:flutter_app/models/index.dart';
-import 'package:flutter_app/states/UserModel.dart';
-import 'package:flutter_app/widget/MyDrawer.dart';
-import 'package:flutter_app/widget/RepoItem.dart';
+import 'package:github_app/l10n/localization_intl.dart';
+import 'package:github_app/models/index.dart';
+import 'package:github_app/states/UserModel.dart';
+import 'package:github_app/widget/MyDrawer.dart';
+import 'package:github_app/widget/RepoItem.dart';
+import 'package:infinite_listview/infinite_listview.dart';
 import 'package:provider/provider.dart';
 
 class HomeRoute extends StatefulWidget {
@@ -39,26 +38,26 @@ Widget _buildBody(BuildContext context) {
     );
   } else {
     //已登录，则展示项目列表
-    return InfiniteListView<Repo>(
-      onRetrieveData: (int page, List<Repo> items, bool refresh) async {
-        var data = await Git(context).getRepos(
-          refresh: refresh,
-          queryParameters: {
-            'page': page,
-            'page_size': 20,
-          },
-        );
-        if (data == null || data.isEmpty) {
-          return false;
-        }
-        //把请求到的新数据添加到items中
-        items.addAll(data);
-        // 如果接口返回的数量等于'page_size'，则认为还有数据，反之则认为最后一页
-        return data.length == 20;
-      },
-      itemBuilder: (List list, int index, BuildContext ctx) {
+    return InfiniteListView.builder(
+      // onRetrieveData: (int page, List<Repo> items, bool refresh) async {
+      //   var data = await Git(context).getRepos(
+      //     refresh: refresh,
+      //     queryParameters: {
+      //       'page': page,
+      //       'page_size': 20,
+      //     },
+      //   );
+      //   if (data == null || data.isEmpty) {
+      //     return false;
+      //   }
+      //   //把请求到的新数据添加到items中
+      //   items.addAll(data);
+      //   // 如果接口返回的数量等于'page_size'，则认为还有数据，反之则认为最后一页
+      //   return data.length == 20;
+      // },
+      itemBuilder: (BuildContext ctx, int index) {
         // 项目信息列表项
-        return RepoItem(list[index]);
+        return RepoItem(Repo());
       },
     );
   }
@@ -71,7 +70,7 @@ Widget gmAvatar(
   BoxFit? fit,
   BorderRadius? borderRadius,
 }) {
-  var placeholder = Image.asset("images/click.png", //头像占位图，加载过程中显示
+  var placeholder = Image.asset("assets/images/github-fill.png", //头像占位图，加载过程中显示
       width: width,
       height: height);
   return ClipRRect(

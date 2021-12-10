@@ -1,5 +1,5 @@
-import 'package:flutter_app/states/ProfileChangeNotifier.dart';
-import 'package:flutter_app/models/index.dart';
+import 'package:github_app/states/ProfileChangeNotifier.dart';
+import 'package:github_app/models/index.dart';
 
 class UserModel extends ProfileChangeNotifier {
   User? get user => profile.user;

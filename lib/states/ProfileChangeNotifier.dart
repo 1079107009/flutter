@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_app/models/index.dart';
+import 'package:github_app/models/index.dart';
 
 import '../common/Global.dart';
 

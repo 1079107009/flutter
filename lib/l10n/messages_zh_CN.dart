@@ -22,13 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function> {
     "cancel" : MessageLookupByLibrary.simpleMessage("取消"),
+    "confirm" : MessageLookupByLibrary.simpleMessage("确认"),
     "home" : MessageLookupByLibrary.simpleMessage("Github客户端"),
     "language" : MessageLookupByLibrary.simpleMessage("语言"),
     "login" : MessageLookupByLibrary.simpleMessage("登录"),
+    "login1" : MessageLookupByLibrary.simpleMessage("登录"),
     "logout" : MessageLookupByLibrary.simpleMessage("注销"),
-    "logoutTip" : MessageLookupByLibrary.simpleMessage("注销提示"),
+    "logoutTip" : MessageLookupByLibrary.simpleMessage("确定注销吗？"),
+    "noDescription" : MessageLookupByLibrary.simpleMessage("无描述"),
+    "password" : MessageLookupByLibrary.simpleMessage("密码"),
+    "passwordRequired" : MessageLookupByLibrary.simpleMessage("请填写密码"),
     "theme" : MessageLookupByLibrary.simpleMessage("主题"),
     "title" : MessageLookupByLibrary.simpleMessage("Flutter应用"),
-    "yes" : MessageLookupByLibrary.simpleMessage("是")
+    "userName" : MessageLookupByLibrary.simpleMessage("用户名"),
+    "userNameOrEmail" : MessageLookupByLibrary.simpleMessage("用户名或邮箱"),
+    "userNameRequired" : MessageLookupByLibrary.simpleMessage("请填写用户名或邮箱")
   };
 }

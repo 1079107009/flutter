@@ -22,13 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function> {
     "cancel" : MessageLookupByLibrary.simpleMessage("cancel"),
+    "confirm" : MessageLookupByLibrary.simpleMessage("confirm"),
     "home" : MessageLookupByLibrary.simpleMessage("Flutter Client"),
-    "language" : MessageLookupByLibrary.simpleMessage("language"),
+    "language" : MessageLookupByLibrary.simpleMessage("Language"),
     "login" : MessageLookupByLibrary.simpleMessage("login"),
-    "logout" : MessageLookupByLibrary.simpleMessage("logout"),
-    "logoutTip" : MessageLookupByLibrary.simpleMessage("logoutTip"),
-    "theme" : MessageLookupByLibrary.simpleMessage("theme"),
+    "login1" : MessageLookupByLibrary.simpleMessage("Login"),
+    "logout" : MessageLookupByLibrary.simpleMessage("Logout"),
+    "logoutTip" : MessageLookupByLibrary.simpleMessage("Are you sure logout?"),
+    "noDescription" : MessageLookupByLibrary.simpleMessage("noDescription"),
+    "password" : MessageLookupByLibrary.simpleMessage("password"),
+    "passwordRequired" : MessageLookupByLibrary.simpleMessage("passwordRequired"),
+    "theme" : MessageLookupByLibrary.simpleMessage("Theme"),
     "title" : MessageLookupByLibrary.simpleMessage("Flutter APP"),
-    "yes" : MessageLookupByLibrary.simpleMessage("yes")
+    "userName" : MessageLookupByLibrary.simpleMessage("userName"),
+    "userNameOrEmail" : MessageLookupByLibrary.simpleMessage("userNameOrEmail"),
+    "userNameRequired" : MessageLookupByLibrary.simpleMessage("userNameRequired")
   };
 }

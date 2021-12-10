@@ -8,12 +8,12 @@ part 'profile.g.dart';
 class Profile {
   Profile();
 
-  late User? user;
-  late String token;
-  late num theme;
-  late CacheConfig? cache;
-  late String? lastLogin;
-  late String? locale;
+  User? user;
+  String? token;
+  num theme = 0;
+  CacheConfig? cache;
+  String? lastLogin;
+  String? locale;
 
   factory Profile.fromJson(Map<String, dynamic> json) =>
       _$ProfileFromJson(json);

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/l10n/localization_intl.dart';
-import 'package:flutter_app/models/index.dart';
-import 'package:flutter_app/routes/home_page.dart';
+import 'package:github_app/models/index.dart';
+import 'package:github_app/routes/home_page.dart';
 
 class RepoItem extends StatefulWidget {
   // 将`repo.id`作为RepoItem的默认key

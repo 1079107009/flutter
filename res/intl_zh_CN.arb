@@ -18,6 +18,12 @@
     "placeholders_order": [],
     "placeholders": {}
   },
+  "login1": "登录",
+  "@login1": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
   "theme": "主题",
   "@theme": {
     "type": "text",
@@ -36,7 +42,7 @@
     "placeholders_order": [],
     "placeholders": {}
   },
-  "logoutTip": "注销提示",
+  "logoutTip": "确定注销吗？",
   "@logoutTip": {
     "type": "text",
     "placeholders_order": [],
@@ -48,8 +54,44 @@
     "placeholders_order": [],
     "placeholders": {}
   },
-  "yes": "是",
-  "@yes": {
+  "confirm": "确认",
+  "@confirm": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "noDescription": "无描述",
+  "@noDescription": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "userName": "用户名",
+  "@userName": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "userNameOrEmail": "用户名或邮箱",
+  "@userNameOrEmail": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "userNameRequired": "请填写用户名或邮箱",
+  "@userNameRequired": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "passwordRequired": "请填写密码",
+  "@passwordRequired": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "password": "密码",
+  "@password": {
     "type": "text",
     "placeholders_order": [],
     "placeholders": {}
